@@ -2,6 +2,10 @@
 
 ## Reunião de exercícios e listas
 
+## Exercícios em classe
+
+- [Diamantes e areia](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/diamantesareia/DiamantesAreia.java)
+
 ### Lista 1
 
 - [Pilha usada](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/lista1/Pilha.java)
