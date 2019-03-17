@@ -132,7 +132,7 @@ public class Pilha<T> {
 
   @Override
   public String toString() {
-    return Arrays.toString(vetor);
+    return "Pilha [total=" + total + ", topo=" + this.exibeTopo() + "]";
   }
 
 
