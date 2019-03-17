@@ -2,7 +2,7 @@
 
 ## Reunião de exercícios e listas
 
-## Exercícios em classe
+### Exercícios em classe
 
 - [Diamantes e areia](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/diamantesareia/DiamantesAreia.java)
 
