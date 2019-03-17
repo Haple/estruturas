@@ -1,7 +1,7 @@
 package br.edu.puccampinas.lista2;
 
 /**
- * Exercício da segunda lista
+ * Exercício 3 da segunda lista
  * 
  * @author aleph
  *
