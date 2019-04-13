@@ -31,7 +31,9 @@
 
 **Exercício 1 (pendente)**
 
-**Exercício 2 (pendente)**
+**Exercício 2**
+- [Solução](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/lista4/Ex2.java)
+- [Classe Fila](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/lista4/Fila.java)
 
 **Exercício 3**
 - [Solução](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/lista4/Ex3.java)
