@@ -36,7 +36,7 @@ public class Ex3 {
       return;
     }
     Fila<Registro> aux = new Fila<Registro>();
-    while (f.getItem().getPrioridade() <= novo.getPrioridade()) {
+    while (!f.isVazia() && f.getItem().getPrioridade() <= novo.getPrioridade()) {
       aux.insereItem(f.getItem());
       f.removeItem();
     }

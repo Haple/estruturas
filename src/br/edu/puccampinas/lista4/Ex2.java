@@ -12,29 +12,42 @@ public class Ex2 {
     Integer numElementos = 0;
     String valor = "";
     System.out.println("Digite o número de elementos a serem inseridos na fila: ");
-    System.out.println(new String(new char[50]).replaceAll("\0", "*"));
+    printSeparator();
     try {
       numElementos = Integer.valueOf(br.readLine());
       for (int i = 0; i < numElementos; i++) {
-        System.out.println("Qual é o elemento número " + (i + 1) + "? ");
-        valor = br.readLine();
-        fila.insereItem(valor);
+        System.out.println("Qual é o elemento da posição " + i + "? ");
+        fila.insereItem(br.readLine());
       }
       System.out.println("Digite um novo valor: ");
       valor = br.readLine();
       System.out.println("Após qual posição ele deve ser inserido? ");
-      Integer posicao= Integer.valueOf(br.readLine());
+      Integer posicao = Integer.valueOf(br.readLine());
       addElemento(valor, posicao, fila);
+      printSeparator();
+      System.out.println("Fila final: ");
+      while (!fila.isVazia()) {
+        System.out.println(fila.getItem());
+        fila.removeItem();
+      }
     } catch (NumberFormatException | IOException e) {
       System.err.println("Não foi possível ler a entrada!");
-    }
-    while (!fila.isVazia()) {
-      System.out.println(fila.getItem());
-      fila.removeItem();
+    } catch (Exception e) {
+      System.err.println("Não há elemento na posição especificada!");
     }
   }
 
-  private static void addElemento(String novo, Integer posicao, Fila<String> f) {
+  private static void printSeparator() {
+    System.out.println(new String(new char[50]).replaceAll("\0", "*"));
+  }
+
+  private static void addElemento(String novo, Integer posicao, Fila<String> f) throws Exception {
+    if (posicao == null || f == null) {
+      throw new Exception("Parâmetros nulos não são permitidos!");
+    }
+    if (posicao < 0 || posicao > f.getTamanho() - 1) {
+      throw new Exception("Posição inválida!");
+    }
     if (f.isVazia()) {
       f.insereItem(novo);
       return;
@@ -42,17 +55,12 @@ public class Ex2 {
     Fila<String> aux = new Fila<String>();
     Integer posicaoAtual = 0;
     while (!f.isVazia()) {
+      aux.insereItem(f.getItem());
+      f.removeItem();
       if (posicaoAtual == posicao) {
         aux.insereItem(novo);
-        break;
       }
-      aux.insereItem(f.getItem());
-      f.removeItem();
       posicaoAtual++;
-    }
-    while (!f.isVazia()) {
-      aux.insereItem(f.getItem());
-      f.removeItem();
     }
     while (!aux.isVazia()) {
       f.insereItem(aux.getItem());
