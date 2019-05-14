@@ -152,6 +152,20 @@ public class Lista<TipoItem> {
     }
   }
 
+  public int getItem(TipoItem item) throws Exception {
+    if (item == null)
+      throw new Exception("Item inválido!");
+    if (this.isVazia())
+      throw new Exception("Nada guardado");
+
+    for (int i = 1; i < this.tamanho; i++) {
+      if (item.equals(this.getItem(i))) {
+        return i;
+      }
+    }
+    return 0;
+  }
+
   public boolean isVazia() {
     return this.primeiro == null;
   }
