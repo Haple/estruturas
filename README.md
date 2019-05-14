@@ -40,3 +40,13 @@
 - [Classe Registro](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/lista4/Registro.java)
 - [Classe Fila](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/lista4/Fila.java)
 
+## Lista 5
+
+**Exercício 1 (pendente)**
+
+**Exercício 2 (pendente)**
+
+**Exercício 3**
+- [Solução](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/lista5/Ex3.java)
+- [Classe Lista](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/lista5/Lista.java)
+
