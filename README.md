@@ -57,3 +57,7 @@
 **Exercício 1**
 - [Solução](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/lista6/Ex1.java)
 - [Classe Árvore Binária Balanceada](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/lista6/ArvoreBinariaBalanceada.java)
+
+**Exercício 2**
+- [Solução](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/lista6/Ex2.java)
+- [Classe Árvore Binária Balanceada](https://github.com/Haple/estruturas/blob/master/src/br/edu/puccampinas/lista6/ArvoreBinariaBalanceada.java)

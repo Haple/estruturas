@@ -221,6 +221,41 @@ public class ArvoreBinariaBalanceada<TipoItem extends Comparable<TipoItem>> {
   }
 
   /**
+   * Verifica se uma árvore é completa
+   * 
+   * @return 0 se for completa, 1 caso contrário
+   */
+  public int isCompleta() {
+    int alturaRaiz = this.getAltura(this.raiz);
+    return isCompleta(this.raiz, alturaRaiz, 0);
+  }
+
+  private int isCompleta(No noAtual, int alturaRaiz, int nivelAnterior) {
+    // Uma árvore vazia é completa
+    if (noAtual == null)
+      return 1;
+
+    // Nó folha
+    if (noAtual.esquerdo == null && noAtual.direito == null) {
+      if (alturaRaiz == nivelAnterior + 1)
+        return 1;
+      else
+        return 0;
+    }
+
+    // Se não é folha e tem um nó nulo a árvore nó completa
+    if (noAtual.esquerdo == null || noAtual.direito == null)
+      return 0;
+
+    if (isCompleta(noAtual.esquerdo, alturaRaiz, nivelAnterior + 1) == 1
+        && isCompleta(noAtual.direito, alturaRaiz, nivelAnterior + 1) == 1) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+
+  /**
    * Para cada nó da árvore, os nós filhos são invertidos.
    * 
    * @throws Exception caso a árvore esteja vazia

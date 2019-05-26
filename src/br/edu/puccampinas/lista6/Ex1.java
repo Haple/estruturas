@@ -21,7 +21,7 @@ public class Ex1 {
   }
  
 /*  
-  Métodos implementados na classe ArvoreBinariaBalanceada
+  Métodos implementados na classe ArvoreBinariaBalanceada do exercício 1
   */
   
   /**
