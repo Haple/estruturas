@@ -220,6 +220,30 @@ public class ArvoreBinariaBalanceada<TipoItem extends Comparable<TipoItem>> {
     return 1 + alturaDireita;
   }
 
+
+  /**
+   * Encontra os nós folhas (o qual não possui nós filhos) e os remove.
+   */
+  public void removeFolhas() {
+    removeFolhas(this.raiz);
+  }
+
+  private void removeFolhas(No noAtual) {
+    // Uma árvore vazia é completa
+    if (noAtual != null) {
+      // Nó folha
+      if (noAtual.esquerdo == null && noAtual.direito == null) {
+        try {
+          this.removeItem(noAtual.getItem());
+        } catch (Exception e) {
+        }
+        return;
+      }
+      removeFolhas(noAtual.esquerdo);
+      removeFolhas(noAtual.direito);
+    }
+  }
+
   /**
    * Verifica se uma árvore é completa
    * 
